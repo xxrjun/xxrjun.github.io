@@ -114,7 +114,7 @@ export function TechnologiesSection() {
                     }s`,
                   }}
                 >
-                  <Heading as="h3" fontSize="xl" tabIndex="0">
+                  <Heading as="h3" fontSize="l" tabIndex="0">
                     {tech.category}
                   </Heading>
                   <Flex py={5} gap={4} flexWrap="wrap">
