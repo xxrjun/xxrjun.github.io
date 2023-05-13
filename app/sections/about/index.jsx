@@ -40,8 +40,8 @@ export function AboutSection() {
               ]}
               styles={{ color: highlightColor, fontWeight: "bold" }}
             >
-              I am currently studying Management Information System at Nation
-              Central University, TW.
+              My name is rjun. I am currently studying Management Information
+              System at Nation Central University, TW.
             </Highlight>
           </Text>
           <Text
@@ -54,8 +54,10 @@ export function AboutSection() {
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
             }}
           >
-            I enjoy learning technologies I like. I love diving into the field
-            of Computer Science.
+            I enjoy learning technologies that interest me. I love diving into
+            the field of Computer Science. At the moment, I am self-studying
+            Java Spring Boot and Next.js to further expand my skillset and am
+            working on my Student Graduate Project.
           </Text>
           <Text
             fontSize="l"
@@ -67,8 +69,8 @@ export function AboutSection() {
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s",
             }}
           >
-            At the moment, I am self-studying Java Spring Boot and Next.js to
-            further expand my skillset.
+            I hope I could be a talent at the intersection of technology and
+            humanities as Steve Job said.
           </Text>
         </Flex>
 

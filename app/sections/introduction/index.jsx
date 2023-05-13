@@ -23,7 +23,7 @@ export function WelcomeSection() {
   const isInView = useInView(ref, { once: true });
 
   const { scrollToEl } = useScrollTo();
-  const [isAnimationVisible] = useMediaQuery("(min-width: 768px)");
+  const [isCanvasVisible] = useMediaQuery("(min-width: 768px)");
   const subTitleColor = useColorModeValue("blackAlpha.600", "whiteAlpha.600");
   const highlightColor = useColorModeValue("purple.500", "purple.500");
 
@@ -141,7 +141,7 @@ export function WelcomeSection() {
         </Box>
 
         {/* Canvas */}
-        <DesktopCanvas />
+        {isCanvasVisible && <DesktopCanvas />}
       </div>
     </LazyMotion>
   );

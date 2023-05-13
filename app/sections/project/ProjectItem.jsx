@@ -56,7 +56,7 @@ const sxFigure = {
 
 export function ProjectItem(props) {
 	const { project, index } = props;
-	const { description, images, liveUrl, poster, repoUrl, stack, title } = project;
+	const { description, images, liveUrl, poster, html_url, stack, title } = project;
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const finalRef = useRef(null);
 	const cardRef = useRef(null);
@@ -174,9 +174,9 @@ export function ProjectItem(props) {
 						</Flex>
 					)}
 					<HStack py={[null, null, null, null, 5]} spacing={3} justify="center">
-						{repoUrl && (
+						{html_url && (
 							<Link
-								href={repoUrl}
+								href={html_url}
 								target="_blank"
 								tabIndex={-1}
 								style={{

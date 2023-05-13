@@ -14,10 +14,10 @@ import { BsArrowReturnLeft } from "react-icons/bs";
 import { initial, animate, exit, transition } from "utils/motions";
 
 const MenuItems = [
-  { id: "0", name: "Introduction", url: "#intro" },
+  { id: "0", name: "Intro", url: "#intro" },
   { id: "1", name: "About", url: "#about" },
-  { id: "2", name: "Projects", url: "#projects" },
-  { id: "3", name: "Skills", url: "#skills" },
+  { id: "2", name: "Skills", url: "#tech" },
+  { id: "3", name: "Projects", url: "#projects" },
 ];
 
 const linkCustomStyles = {
