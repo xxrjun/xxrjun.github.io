@@ -2,8 +2,7 @@ import axios from "axios";
 
 export const fetcher = (url) =>
   axios
-    .get({
-      url,
+    .get(url, {
       headers: {
         Authorization: `${process.env.NEXT_PUBLIC_GITHUB_API_TOKEN}`,
       },
@@ -11,13 +10,11 @@ export const fetcher = (url) =>
     .then((res) => res.data);
 
 export const arrayFetcher = (urlArr) => {
-  // const f = (u) = axios.get(url).then((res) => {
-  // 	console.log(url);
-  // 	console.log(res);
+  return Promise.all(
+    urlArr.map((url) => {
+      console.log("fetching: " + url);
 
-  // 	return res.data;
-  // });
-
-
-  return Promise.all(urlArr.map((url) => fetcher(url)));
+      return fetcher(url);
+    })
+  );
 };
