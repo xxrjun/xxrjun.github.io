@@ -14,15 +14,15 @@ const DynamicLoader = dynamic(() =>
   import("components/Loader").then((mod) => mod.Loader)
 );
 
-// const url = `${process.env.NEXT_PUBLIC_SANITY_URL}${process.env.NEXT_PUBLIC_SANITY_LATEST_PROJECTS}`;
-
 const repos = [
   "xxrjun/cs-resources",
   "CARRYUU/carryu",
   "xxrjun/total-repos-size",
 ];
 
-const reposUrl = repos.map((repo) => `https://api.github.com/repos/${repo}`);
+const reposUrl = repos.map(
+  (repo) => `${process.env.NEXT_PUBLIC_GITHUB_API_BASE_URL}/${repo}`
+);
 
 export function ProjectsSection() {
   const btnRef = useRef(null);
@@ -34,9 +34,7 @@ export function ProjectsSection() {
 
   console.log(data);
 
-  const projects = data?.result;
-
-  console.log(projects);
+  const projects = data;
 
   if (error && !data) {
     console.log("error in ProjectsSection: " + error);
