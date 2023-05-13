@@ -56,7 +56,7 @@ export function WelcomeSection() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <div className="{`relative w-full h-screen mx-auto`}">
+      <div className="relative w-full h-screen mx-auto">
         <Box
           as="section"
           id="intro"
