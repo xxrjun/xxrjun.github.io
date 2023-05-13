@@ -7,15 +7,14 @@ import {
   ProjectsSection,
 } from "app/sections";
 
-import { Hero } from "components";
 
 export default function Page() {
   return (
     <>
       <WelcomeSection />
       <AboutSection />
-      {/* <ProjectsSection /> */}
-      {/* <TechnologiesSection /> */}
+      <TechnologiesSection />
+      <ProjectsSection />
     </>
   );
 }

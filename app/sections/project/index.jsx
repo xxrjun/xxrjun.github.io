@@ -8,22 +8,39 @@ import useSWR from "swr";
 import { Box, Button, Center, SimpleGrid } from "@chakra-ui/react";
 import { HeadingDivider } from "components";
 import { ProjectItem } from "./ProjectItem";
-import { fetcher } from "utils/fetcher";
+import { arrayFetcher } from "utils/fetcher";
 
 const DynamicLoader = dynamic(() =>
   import("components/Loader").then((mod) => mod.Loader)
 );
 
-const url = `${process.env.NEXT_PUBLIC_SANITY_URL}${process.env.NEXT_PUBLIC_SANITY_LATEST_PROJECTS}`;
+// const url = `${process.env.NEXT_PUBLIC_SANITY_URL}${process.env.NEXT_PUBLIC_SANITY_LATEST_PROJECTS}`;
+
+const repos = [
+  "xxrjun/cs-resources",
+  "CARRYUU/carryu",
+  "xxrjun/total-repos-size",
+];
+
+const reposUrl = repos.map((repo) => `https://api.github.com/repos/${repo}`);
 
 export function ProjectsSection() {
   const btnRef = useRef(null);
   const isBtnInView = useInView(btnRef, { once: true });
 
-  const { data, error } = useSWR(url, fetcher);
+  console.log(reposUrl);
+
+  const { data, error } = useSWR(reposUrl, arrayFetcher);
+
+  console.log(data);
+
   const projects = data?.result;
 
+  console.log(projects);
+
   if (error && !data) {
+    console.log("error in ProjectsSection: " + error);
+
     return null;
   }
 
@@ -35,7 +52,7 @@ export function ProjectsSection() {
       <Suspense fallback={<DynamicLoader width="100%" />}>
         <SimpleGrid spacingY={10} spacingX={6} columns={[1, 1, 3]}>
           {projects
-            ?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+            ?.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
             ?.map((project, index) => (
               <ProjectItem key={project._id} project={project} index={index} />
             ))}
