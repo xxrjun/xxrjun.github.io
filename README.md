@@ -28,7 +28,7 @@
   - [x] More Projects Button: Link to GitHub Repositories
 - [x] RWD
 
-**Bus & Improvements**
+**Bus & Improvments**
 
 - [x] 首頁部分添加下滑按鈕，增加手機板的使用者體驗
 
