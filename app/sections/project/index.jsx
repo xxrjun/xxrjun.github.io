@@ -44,7 +44,7 @@ export function ProjectsSection() {
 
   return (
     <Box as="section" id="projects" className="section">
-      <HeadingDivider title="Latest projects" />
+      <HeadingDivider title="Projects & Repositories" />
       <Box py={8} />
 
       <Suspense fallback={<DynamicLoader width="100%" />}>
@@ -59,7 +59,8 @@ export function ProjectsSection() {
 
       <Center mt={[8, 8, 16]}>
         <Link
-          href="/projects"
+          href="https://github.com/xxrjun?tab=repositories"
+          target="_blank"
           tabIndex={-1}
           aria-label="Go to project page"
           ref={btnRef}
@@ -69,7 +70,7 @@ export function ProjectsSection() {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
-          <Button aria-label="See more projects">More projects</Button>
+          <Button aria-label="See more projects">More projects on GitHub</Button>
         </Link>
       </Center>
     </Box>

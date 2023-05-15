@@ -56,7 +56,7 @@ const sxFigure = {
 
 export function ProjectItem(props) {
   const { project, index } = props;
-  const { description, images, homepage, poster, html_url, topics, title } =
+  const { name, description, images, homepage, poster, html_url, topics, title } =
     project;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = useRef(null);
@@ -85,7 +85,7 @@ export function ProjectItem(props) {
     <LazyMotion features={domAnimation}>
       <Grid
         templateRows={[
-          //   "225px 1fr",
+            // "225px 1fr",
           "250px 1fr",
           "200px 1fr",
           //   "260px 1fr minmax(clamp(50px, 100px, 160px), 160px)",
@@ -109,6 +109,7 @@ export function ProjectItem(props) {
           }s`,
         }}
       >
+		{/* Images */}
         {/* <Flex
           as="figure"
           justifyContent="center"
@@ -174,10 +175,11 @@ export function ProjectItem(props) {
           flexDirection="column"
           alignItems="center"
           gap={4}
-          px={3}
+          px={4}
+		  pt={8}
         >
           <Heading as="h3" fontSize={["xl", "xl", "xl", "2xl"]} tabIndex="0">
-            {title}
+            {name}
           </Heading>
           <Text textAlign="center" tabIndex="0">
             {description}
