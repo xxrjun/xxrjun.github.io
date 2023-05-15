@@ -18,6 +18,10 @@
   - [ ] More Projects 頁面
 - [x] RWD
 
+### Bugs & Improvements
+
+- [ ] 首頁部分添加下滑按鈕，增加手機板的使用者體驗
+
 ## 使用工具 Built With
 
 ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![Next.js 13](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/tailwindcss-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Chakra UI](https://img.shields.io/badge/Chakra%20UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white) ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=github&logoColor=white) ![ChatGPT(4.0)](<https://img.shields.io/badge/ChatGPT(4.0)-000000?style=for-the-badge&logo=openai&logoColor=white>) ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Axios](https://img.shields.io/badge/axios-5A2D9C?style=for-the-badge&logo=axios&logoColor=white) ![GitHub API](https://img.shields.io/badge/GitHub%20API-181717?style=for-the-badge&logo=github&logoColor=white) ![package.json](https://img.shields.io/badge/package.json-000000?style=for-the-badge&logo=json&logoColor=white)
@@ -32,8 +36,6 @@
 | API 套件     | [Axios](https://axios-http.com/docs/intro)                                                                       |
 | 其他套件     | [package.json](./package.json)                                                                                   |
 
-Please note that the vertical bars `|` are used to divide each cell in the table and the hyphens `-` are used to create the header line. The text alignment can be controlled by colons `:`.
-
 ## 參考資料 References
 
 ### 參考專案 Reference Projects
@@ -42,6 +44,7 @@ Please note that the vertical bars `|` are used to divide each cell in the table
   - Youtube 上有教學 [Build and Deploy an Amazing 3D Web Developer Portfolio in React JS | Beginner Three.js Tutorial](https://youtu.be/0fYi8SGA20k)
 - [Infvyr/nextjs-portfolio](https://github.com/Infvyr/nextjs-portfolio)
   - 有取得原作者授權許可，非常感謝!
+  - 原作者是使用 Sanity.io 作為 CMS，為求簡便我是使用 GitHub API 導入專案資料，缺點是無法取得專案圖片。
 
 ### 其他參考資料 Other References
 
