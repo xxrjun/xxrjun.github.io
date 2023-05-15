@@ -2,6 +2,16 @@
 
 # xxrjun Portfolio
 
+- [xxrjun Portfolio](#xxrjun-portfolio)
+  - [Todo List](#todo-list)
+  - [使用工具 Built With](#使用工具-built-with)
+  - [參考資料 References](#參考資料-references)
+    - [參考專案 Reference Projects](#參考專案-reference-projects)
+    - [其他參考資料 Other References](#其他參考資料-other-references)
+  - [Getting Started](#getting-started)
+    - [Learn More](#learn-more)
+    - [Deploy on Vercel](#deploy-on-vercel)
+
 ## Todo List
 
 - [x] Introduction 首頁部分
@@ -15,12 +25,12 @@
   - Other tools: Git, GitHub, Postman, Figma, VSCode, Intellij
 - [x] Projects 做過的專案 (串接 GitHub API 提供 Repositories 資料)
   - [x] 三個主要顯示的專案: [carryu](https://github.com/CARRYUU/carryu)、[cs-resources](https://github.com/xxrjun/cs-resources)、[total-repos-size](https://github.com/xxrjun/total-repos-size)
-  - [ ] More Projects 頁面
+  - [x] More Projects Button: Link to GitHub Repositories
 - [x] RWD
 
-### Bugs & Improvements
+**Bus & Improvements**
 
-- [ ] 首頁部分添加下滑按鈕，增加手機板的使用者體驗
+- [x] 首頁部分添加下滑按鈕，增加手機板的使用者體驗
 
 ## 使用工具 Built With
 
@@ -90,7 +100,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -99,7 +109,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
