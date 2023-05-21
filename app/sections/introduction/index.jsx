@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useEffect, useState, useRef, useContext } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import {
@@ -35,10 +34,8 @@ export function WelcomeSection() {
     "also enjoy playing FPS games like valorant.",
   ]);
 
-  
-
   const handleOnClick = (e) => {
-    sscrollToEl(e);
+    scrollToEl(e);
 
     window.setTimeout(() => {
       onClick();
@@ -151,9 +148,7 @@ export function WelcomeSection() {
         <DesktopCanvas />
 
         <div className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center">
-          <ChakraLink href="#about" 
-              onClick={handleOnClick}
-          >
+          <ChakraLink href="#about" onClick={handleOnClick}>
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
                 animate={{
