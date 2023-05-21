@@ -2,15 +2,15 @@
 
 import { useEffect, useState, useRef, useContext } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
+import Link from "next/link";
+
 import {
   Flex,
   Heading,
   Highlight,
   Box,
   Text,
-  useMediaQuery,
   useColorModeValue,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { useScrollTo } from "hooks";
 import { LayoutContext } from "context/layout";
@@ -23,7 +23,6 @@ export function WelcomeSection() {
   const isInView = useInView(ref, { once: true });
 
   const { scrollToEl } = useScrollTo();
-  const [isCanvasVisible] = useMediaQuery("(min-width: 768px)");
   const subTitleColor = useColorModeValue("blackAlpha.600", "whiteAlpha.600");
   const highlightColor = useColorModeValue("purple.500", "purple.500");
 
@@ -35,12 +34,13 @@ export function WelcomeSection() {
   ]);
 
   const handleOnClick = (e) => {
-    scrollToEl(e);
+    e.preventDefault();
 
-    window.setTimeout(() => {
-      onClick();
-    }, 350);
-  };
+		scroll({
+			top: 800,
+			behavior: "smooth"
+		});
+  }
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -147,8 +147,7 @@ export function WelcomeSection() {
         {/* Canvas */}
         <DesktopCanvas />
 
-        <div className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center">
-          <ChakraLink href="#about" onClick={handleOnClick}>
+        <div className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center" onClick={handleOnClick}>
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
                 animate={{
@@ -162,7 +161,6 @@ export function WelcomeSection() {
                 className="w-3 h-3 rounded-full bg-secondary mb-1"
               />
             </div>
-          </ChakraLink>
         </div>
       </div>
     </LazyMotion>
