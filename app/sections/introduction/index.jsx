@@ -37,7 +37,7 @@ export function WelcomeSection() {
     e.preventDefault();
 
 		scroll({
-			top: 800,
+			top: 680,
 			behavior: "smooth"
 		});
   }
