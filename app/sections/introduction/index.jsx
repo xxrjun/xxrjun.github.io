@@ -11,8 +11,16 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { LayoutContext } from "context/layout";
-import { DesktopCanvas } from "@/components";
+// import { DesktopCanvas } from "@/components";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const DesktopCanvas = dynamic(
+  () => import("@/components").then((mod) => mod.DesktopCanvas),
+  {
+    ssr: false,
+  }
+);
 
 export function WelcomeSection() {
   const ref = useRef(null);

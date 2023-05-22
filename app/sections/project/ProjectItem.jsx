@@ -17,32 +17,12 @@ import Link from "next/link";
 import { VscSourceControl } from "react-icons/vsc";
 import { FiExternalLink } from "react-icons/fi";
 
-import "react-image-gallery/styles/css/image-gallery.css";
-
 export function ProjectItem(props) {
   const { project, index } = props;
-  const {
-    name,
-    description,
-    images,
-    homepage,
-    poster,
-    html_url,
-    topics,
-    title,
-  } = project;
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const finalRef = useRef(null);
+  const { name, description, images, homepage, html_url, topics } = project;
+  const { onOpen } = useDisclosure();
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true });
-
-  // github api 無法取得 preview image
-  if (images) {
-    const galleryImages = images.map((img) => ({
-      original: img,
-      loading: "lazy",
-    }));
-  }
 
   const cardBgColor = useColorModeValue("whiteAlpha.800", "whiteAlpha.50");
 

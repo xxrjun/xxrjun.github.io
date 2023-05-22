@@ -10,7 +10,6 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useScrollTo } from "hooks";
-import { BsArrowReturnLeft } from "react-icons/bs";
 import { initial, animate, exit, transition } from "utils/motions";
 
 const MenuItems = [
@@ -93,26 +92,6 @@ export function Menu({ onClick = () => {} }) {
     </Box>
   );
 
-  // backMenu = (
-  //   <m.div
-  //     initial={initial}
-  //     animate={animate}
-  //     exit={exit}
-  //     transition={transition}
-  //   >
-  //     <Link href="/" title="Back to main page" tabIndex={-1}>
-  //       <Button
-  //         variant="ghost"
-  //         leftIcon={<BsArrowReturnLeft />}
-  //         aria-label="Got to main page"
-  //       >
-  //         Back to main
-  //       </Button>
-  //     </Link>
-  //   </m.div>
-  // );
-
-  // content = pathname === "/projects" ? backMenu : mainMenu;
   content = mainMenu;
 
   if (MenuItems.length === 0) {
