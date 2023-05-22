@@ -56,6 +56,13 @@
   - 有取得原作者授權許可，非常感謝!
   - 原作者是使用 Sanity.io 作為 CMS，為求簡便我是使用 GitHub API 導入專案資料，缺點是無法取得專案圖片。
 
+與原作差別:
+
+- 結合兩者，以後者專案為基底新增 3D 動畫
+- 修正 Canvas 會被右鍵拖走的問題
+- 新增 metadata 優化網站 SEO
+- 使用 GitHub API 取得專案資料
+
 ### 其他參考資料 Other References
 
 - [Next.js Docs](https://nextjs.org/docs)
@@ -65,6 +72,7 @@
 - [framer-motion Docs](https://www.framer.com/motion/)
 - [Three.js Docs](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene) - 3D 動畫框架
 - [Sketchfab](https://sketchfab.com/) - 3D 模型下載網站
+- Favicon 使用 <a href="https://www.flaticon.com/free-icons/cross" title="cross icons">Cross icons created by Pixelmeetup - Flaticon</a>
 
 ## Getting Started
 

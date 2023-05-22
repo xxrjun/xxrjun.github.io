@@ -93,26 +93,27 @@ export function Menu({ onClick = () => {} }) {
     </Box>
   );
 
-  backMenu = (
-    <m.div
-      initial={initial}
-      animate={animate}
-      exit={exit}
-      transition={transition}
-    >
-      <Link href="/" title="Back to main page" tabIndex={-1}>
-        <Button
-          variant="ghost"
-          leftIcon={<BsArrowReturnLeft />}
-          aria-label="Got to main page"
-        >
-          Back to main
-        </Button>
-      </Link>
-    </m.div>
-  );
+  // backMenu = (
+  //   <m.div
+  //     initial={initial}
+  //     animate={animate}
+  //     exit={exit}
+  //     transition={transition}
+  //   >
+  //     <Link href="/" title="Back to main page" tabIndex={-1}>
+  //       <Button
+  //         variant="ghost"
+  //         leftIcon={<BsArrowReturnLeft />}
+  //         aria-label="Got to main page"
+  //       >
+  //         Back to main
+  //       </Button>
+  //     </Link>
+  //   </m.div>
+  // );
 
-  content = pathname === "/projects" ? backMenu : mainMenu;
+  // content = pathname === "/projects" ? backMenu : mainMenu;
+  content = mainMenu;
 
   if (MenuItems.length === 0) {
     return null;

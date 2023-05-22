@@ -7,7 +7,6 @@ import { LayoutProvider } from "context/layout";
 import { theme, navigationHeight, footerHeight } from "utils/theme-config";
 import Loading from "./loading";
 import "./global.css";
-// export const metadata = { ...AppMetadata };
 
 export default function RootLayout({ children }) {
   return (

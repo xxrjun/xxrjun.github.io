@@ -7,17 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.2",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@next/bundle-analyzer": "^13.4.3",
     "@react-three/drei": "^9.66.6",
     "@react-three/fiber": "^8.13.0",
     "@types/three": "^0.152.0",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
+    "cross-env": "^7.0.3",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "framer-motion": "^8.5.5",

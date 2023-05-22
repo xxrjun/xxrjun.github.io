@@ -2,8 +2,6 @@
 
 import { useEffect, useState, useRef, useContext } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
-import Link from "next/link";
-
 import {
   Flex,
   Heading,
@@ -12,7 +10,6 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useScrollTo } from "hooks";
 import { LayoutContext } from "context/layout";
 import { DesktopCanvas } from "@/components";
 import { motion } from "framer-motion";
@@ -22,7 +19,6 @@ export function WelcomeSection() {
   const { introRef, setIntroHeight } = useContext(LayoutContext);
   const isInView = useInView(ref, { once: true });
 
-  const { scrollToEl } = useScrollTo();
   const subTitleColor = useColorModeValue("blackAlpha.600", "whiteAlpha.600");
   const highlightColor = useColorModeValue("purple.500", "purple.500");
 
@@ -36,11 +32,11 @@ export function WelcomeSection() {
   const handleOnClick = (e) => {
     e.preventDefault();
 
-		scroll({
-			top: 680,
-			behavior: "smooth"
-		});
-  }
+    scroll({
+      top: 680,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -147,20 +143,23 @@ export function WelcomeSection() {
         {/* Canvas */}
         <DesktopCanvas />
 
-        <div className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center" onClick={handleOnClick}>
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-              <motion.div
-                animate={{
-                  y: [0, 12, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-secondary mb-1"
-              />
-            </div>
+        <div
+          className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center"
+          onClick={handleOnClick}
+        >
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 12, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
+          </div>
         </div>
       </div>
     </LazyMotion>

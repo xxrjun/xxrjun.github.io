@@ -1,3 +1,5 @@
+"use client";
+
 import { Suspense, useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import {
@@ -6,58 +8,29 @@ import {
   Grid,
   Heading,
   HStack,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
   Tag,
   Text,
   useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import Link from "next/link";
-import ImageGallery from "react-image-gallery";
-import { Loader } from "components";
-import { blurDataUrl } from "utils/theme-config";
-import { MdZoomOutMap } from "react-icons/md";
 import { VscSourceControl } from "react-icons/vsc";
 import { FiExternalLink } from "react-icons/fi";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const sxFigure = {
-  "&:hover, &:focus, &:focus-within": {
-    cursor: "pointer",
-  },
-  "&:before": {
-    content: '""',
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: 0,
-    height: "100%",
-    bgColor: "blackAlpha.50",
-    transformOrigin: "center",
-    transition: "width 300ms ease-in-out, height 300ms ease-in-out",
-  },
-  "&:hover:before, &:focus:before,  &:focus-within:before": {
-    width: "100%",
-  },
-  "&:hover .zoom, &:focus .zoom, &:focus-within .zoom": {
-    visibility: "visible",
-    opacity: 1,
-    transform: "translate(-50%,-50%) scale(1)",
-    transition: "transform 300ms ease-in-out, opacity 300ms ease-in-out",
-  },
-};
-
 export function ProjectItem(props) {
   const { project, index } = props;
-  const { name, description, images, homepage, poster, html_url, topics, title } =
-    project;
+  const {
+    name,
+    description,
+    images,
+    homepage,
+    poster,
+    html_url,
+    topics,
+    title,
+  } = project;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = useRef(null);
   const cardRef = useRef(null);
@@ -85,7 +58,7 @@ export function ProjectItem(props) {
     <LazyMotion features={domAnimation}>
       <Grid
         templateRows={[
-            // "225px 1fr",
+          // "225px 1fr",
           "250px 1fr",
           "200px 1fr",
           //   "260px 1fr minmax(clamp(50px, 100px, 160px), 160px)",
@@ -109,74 +82,13 @@ export function ProjectItem(props) {
           }s`,
         }}
       >
-		{/* Images */}
-        {/* <Flex
-          as="figure"
-          justifyContent="center"
-          pos="relative"
-          onClick={onOpen}
-          onKeyDown={onKeyDown}
-          sx={sxFigure}
-        >
-          <Flex
-            className="zoom"
-            p={1}
-            pos="absolute"
-            top="50%"
-            left="50%"
-            w={10}
-            h={10}
-            alignItems="center"
-            justifyContent="center"
-            borderRadius="50%"
-            visibility="hidden"
-            opacity="0.25"
-            transform="translate(-50%,-50%) scale(0.2)"
-          >
-            <MdZoomOutMap size={30} fill="white" />
-          </Flex>
-          <Image
-            src={poster}
-            width={250}
-            height={250}
-            alt="poster"
-            placeholder="blur"
-            blurDataURL={blurDataUrl}
-            aria-label="Press enter key to open gallery"
-            tabIndex="0"
-            style={{ width: "100%", objectFit: "cover" }}
-          />
-          <Modal
-            isOpen={isOpen}
-            onClose={onClose}
-            finalFocusRef={finalRef}
-            isCentered
-          >
-            <ModalOverlay bg="none" backdropFilter="auto" backdropBlur="5px" />
-            <ModalContent maxW="80vw" minH="calc(100% - 130px)" bg="none">
-              <ModalHeader>{title} Gallery</ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Suspense fallback={<Loader width="100%" />}>
-                  <ImageGallery
-                    items={galleryImages}
-                    showPlayButton={false}
-                    showThumbnails={false}
-                    showIndex
-                    lazyload
-                  />
-                </Suspense>
-              </ModalBody>
-            </ModalContent>
-          </Modal>
-        </Flex> */}
         <Flex
           as="header"
           flexDirection="column"
           alignItems="center"
           gap={4}
           px={4}
-		  pt={8}
+          pt={8}
         >
           <Heading as="h3" fontSize={["xl", "xl", "xl", "2xl"]} tabIndex="0">
             {name}
@@ -220,7 +132,7 @@ export function ProjectItem(props) {
                 </Button>
               </Link>
             )}
-            {homepage&& (
+            {homepage && (
               <Link
                 href={homepage}
                 target="_blank"
