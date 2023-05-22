@@ -19,30 +19,17 @@ import { FiExternalLink } from "react-icons/fi";
 
 export function ProjectItem(props) {
   const { project, index } = props;
-  const { name, description, images, homepage, html_url, topics } = project;
+  const { name, description, homepage, html_url, topics } = project;
   const { onOpen } = useDisclosure();
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true });
 
   const cardBgColor = useColorModeValue("whiteAlpha.800", "whiteAlpha.50");
 
-  const onKeyDown = (event) => {
-    if (event.code === "Enter" && !event.shiftKey) {
-      event.preventDefault();
-
-      onOpen();
-    }
-  };
-
   return (
     <LazyMotion features={domAnimation}>
       <Grid
-        templateRows={[
-          // "225px 1fr",
-          "250px 1fr",
-          "200px 1fr",
-          //   "260px 1fr minmax(clamp(50px, 100px, 160px), 160px)",
-        ]}
+        templateRows={["250px 1fr", "200px 1fr"]}
         gap={5}
         pb={5}
         bgColor={cardBgColor}

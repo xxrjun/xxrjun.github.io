@@ -11,7 +11,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { LayoutContext } from "context/layout";
-// import { DesktopCanvas } from "@/components";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
