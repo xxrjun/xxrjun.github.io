@@ -9,8 +9,6 @@ import { initial, animate, exit, transition } from "utils/motions";
 const logoText = "@xxrjun";
 
 export function Logo() {
-  const pathname = usePathname();
-
   return (
     <LazyMotion features={domAnimation}>
       <Heading
@@ -22,13 +20,7 @@ export function Logo() {
         exit={exit}
         transition={transition}
       >
-        {pathname === "/projects" ? (
-          <Link href="/" aria-label="Go to main page" role="link">
-            {logoText}
-          </Link>
-        ) : (
-          logoText
-        )}
+        {logoText}
       </Heading>
     </LazyMotion>
   );

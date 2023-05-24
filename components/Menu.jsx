@@ -1,14 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import {
-  Box,
-  Link as ChakraLink,
-  Button,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Box, Link as ChakraLink, useMediaQuery } from "@chakra-ui/react";
 import { useScrollTo } from "hooks";
 import { initial, animate, exit, transition } from "utils/motions";
 
@@ -39,8 +32,7 @@ const linkCustomStyles = {
 };
 
 export function Menu({ onClick = () => {} }) {
-  let content, mainMenu, backMenu;
-  const pathname = usePathname();
+  let content, mainMenu;
   const [isMobile] = useMediaQuery("(max-width: 767px)");
   const { scrollToEl } = useScrollTo();
 
@@ -75,6 +67,7 @@ export function Menu({ onClick = () => {} }) {
         {MenuItems.sort(sortCallback).map((menuItem) => (
           <Box as="li" key={menuItem.id}>
             <ChakraLink
+              role="menuitem"
               href={menuItem.url}
               title={menuItem.name}
               fontSize={["15px", "20px"]}
