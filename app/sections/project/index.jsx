@@ -70,7 +70,9 @@ export function ProjectsSection() {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
-          <Button aria-label="See more projects">More projects on GitHub</Button>
+          <Button aria-label="See more projects">
+            More projects on GitHub
+          </Button>
         </Link>
       </Center>
     </Box>
