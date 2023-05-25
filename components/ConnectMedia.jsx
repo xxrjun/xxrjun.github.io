@@ -45,6 +45,7 @@ export function ConnectMedia() {
           {MediaIcons.map((item) => (
             <Box as="li" key={item.id}>
               <Link
+                role="menuitem"
                 href={item.url}
                 target="_blank"
                 title={item.title}

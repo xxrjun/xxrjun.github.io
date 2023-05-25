@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "./public/desktop_pc/scene.bin",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        }
+      ]
+    }
+  ]
+}

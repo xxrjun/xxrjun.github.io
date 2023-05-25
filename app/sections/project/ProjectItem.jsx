@@ -20,7 +20,6 @@ import { FiExternalLink } from "react-icons/fi";
 export function ProjectItem(props) {
   const { project, index } = props;
   const { name, description, homepage, html_url, topics } = project;
-  const { onOpen } = useDisclosure();
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true });
 
@@ -29,7 +28,7 @@ export function ProjectItem(props) {
   return (
     <LazyMotion features={domAnimation}>
       <Grid
-        templateRows={["250px 1fr", "200px 1fr"]}
+        templateRows={["320px 1fr", "300px 1fr"]}
         gap={5}
         pb={5}
         bgColor={cardBgColor}
@@ -65,7 +64,7 @@ export function ProjectItem(props) {
           </Text>
         </Flex>
 
-        <Grid as="footer" gridTemplateRows="1fr 40px" gap={5} px={3}>
+        <Grid as="footer" gridTemplateRows="1fr 80px" gap={5} px={3}>
           {!!topics.length && (
             <Flex
               justifyContent="center"
@@ -73,8 +72,8 @@ export function ProjectItem(props) {
               gap={3}
               alignContent="flex-start"
             >
-              {topics.map((tag) => (
-                <Tag key={tag} cursor="default" tabIndex="0">
+              {topics.slice(0, 10).map((tag, index) => (
+                <Tag key={index} cursor="default" tabIndex="0">
                   {tag}
                 </Tag>
               ))}
