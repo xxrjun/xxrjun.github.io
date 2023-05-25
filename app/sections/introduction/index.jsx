@@ -88,7 +88,7 @@ export function WelcomeSection() {
                 query={["passionate", "rjun"]}
                 styles={{ color: highlightColor }}
               >
-                Hi, I&apos;m rjun, a passionate programmer.
+                Hi, I&apos;m rjun, a passionate programmer!
               </Highlight>
             </Heading>
 
