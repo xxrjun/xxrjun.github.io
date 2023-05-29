@@ -52,6 +52,7 @@
 
 - [adrianhajdin/project_3D_developer_portfolio](https://github.com/adrianhajdin/project_3D_developer_portfolio)
   - Youtube 上有教學 [Build and Deploy an Amazing 3D Web Developer Portfolio in React JS | Beginner Three.js Tutorial](https://youtu.be/0fYi8SGA20k)
+  - 原作者是使用 React，但想嘗試新技術的我選擇使用 Next.js
 - [Infvyr/nextjs-portfolio](https://github.com/Infvyr/nextjs-portfolio)
   - 有取得原作者授權許可，非常感謝!
   - 原作者是使用 Sanity.io 作為 CMS，為求簡便我是使用 GitHub API 導入專案資料，缺點是無法取得專案圖片。
@@ -60,6 +61,8 @@
 
 - 結合兩者，以後者專案為基底新增 3D 動畫
 - 修正 Canvas 會被右鍵拖走的問題
+- 優化 Canvas 效能，針對 3D 模型紋理進行低失真壓縮
+- 針對 Accessibility 做些微優化
 - 新增 metadata 優化網站 SEO
 - 使用 GitHub API 取得專案資料
 
