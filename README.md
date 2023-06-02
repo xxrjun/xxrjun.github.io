@@ -59,12 +59,13 @@
 
 與原作差別:
 
-- 結合兩者，以後者專案為基底新增 3D 動畫
+- 結合兩者，以後者專案為基底新增 3D 動畫，使用 NextJS 作為前端開發框架
+- 對於 3D 動畫新增 RWD
 - 修正 Canvas 會被右鍵拖走的問題
 - 優化 Canvas 效能，針對 3D 模型紋理進行低失真壓縮
 - 針對 Accessibility 做些微優化
 - 新增 metadata 優化網站 SEO
-- 使用 GitHub API 取得專案資料
+- 使用 Axios 套件呼叫 GitHub API 取得專案資料
 
 ### 其他參考資料 Other References
 
